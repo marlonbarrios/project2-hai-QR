@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/haikus">Back to haikus Index</a>
+    </nav>
+    <h1><%=haiku.title %></h1>
+   <p><%= haiku.line1%></p>
+    <br />
+    <p><%= haiku.line2%></p>
+    <br />
+    <p><%= haiku.line3%></p>
+    <br />
+    <p><img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=<%=haiku.line1,%><%=haiku.line2,%><%=haiku.line3%>"  download /"></p>
+  </body>
+</html>
