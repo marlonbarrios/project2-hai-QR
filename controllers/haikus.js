@@ -19,7 +19,7 @@ haikuRouter.get("/", (req, res) => {
     })
   })
 
- 
+ //NNN
  haikuRouter.get("/new", (req, res) => {
     res.render("new.ejs")
   })
@@ -34,16 +34,35 @@ haikuRouter.delete("/:id", (req, res) => {
 
 // Update
 
-  haikuRouter.put("/:id", (req, res) => {
- Haiku.findByIdAndUpdate(req.params.id, req.body, (err, haiku) => {
-    res.redirect(`/haikus/${req.params.id}`);
-});
+// haikuRouter.put("haikus/:_id", (req, res) => {
+//     console.log('Update route has been accessed');
+//    Haiku.findByIdAndUpdate(
+//     haiku.author = req.body.author,
+//     haiku.title = req.body.title,
+//     haiku.file1 = req.body.file1,
+//     haiku.file2 = req.body.file2,
+//     haiku.file3 = req.body.file3,
+// // {
+//         new: true,
+//       },
+//       (error, updatedHaiku) => {
+//         res.redirect(`haikus/${req.params._id}`)
+//       }
+//     )
+//   })
+    
 
-})
+
+ haikuRouter.put('/:id', (req, res) => {
+
+     
+      Haiku.findByIdAndUpdate(req.params.id, req.body, (err, haiku) => {
+            res.redirect(`/haikus/${req.params.id}`);
+        }); 
+       
+    }); 
 
 
-
-  
 //   // Create Route
 haikuRouter.post('/', (req, res) => {
 // req.body.completed = !!req.body.completed; // !!'on' -> true or !!undefined -> false
@@ -52,10 +71,22 @@ Haiku.create(req.body, function (err, haiku) {
     });
 });
 
+////eeeee
+
+haikuRouter.get("/:_id/edit", (req, res) => {
+    Haiku.findById(req.params._id, (err, foundHaiku) => {
+        
+      res.render("edit.ejs", {
+        haiku: foundHaiku,
+      
+      })
+    })
+  })
+
 
   // Show
-haikuRouter.get("/:id", (req, res) => {
-    Haiku.findById(req.params.id, (err, foundHaiku) => {
+haikuRouter.get("/:_id", (req, res) => {
+    Haiku.findById(req.params._id, (err, foundHaiku) => {
       res.render("show.ejs", {
         haiku: foundHaiku,
       })

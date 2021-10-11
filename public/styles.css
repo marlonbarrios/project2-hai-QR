@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+  }
+  
+body {
+   
+    justify-content: center;
+    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+  
+  } 
+  
+ .container {
+    display: flex;
+    flex-direction: row-reverse;
+  
+  }
+
+.box {
+   
+   justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+  } 
+
+  input {text-align: center;
+    width: 500px ;
+    height: 60px;
+    font-size: 50px;
+    align-items: center;
+  }
+
+  .line {
+    font-size: 40px;
+    margin: 5px;
+  }
+
+  #title {
+    font-size: 55px;
+
+  }
+
+  #author { font-size: 20px;
+
+  }
+
+  #delete { 
+    width: 70px ;
+    height: 20px;
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  
+
+

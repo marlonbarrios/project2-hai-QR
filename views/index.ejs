@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title>Here's Your haiku List</title>
+    <LINK href="/styles.css" rel="stylesheet" type="text/css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+            </style>
   </head>
   <body>
     <h1>haiku index page</h1>
@@ -13,12 +17,13 @@
     <ul>
       <% haikus.forEach(haiku => { %>
         <li>
-          <a href="/haikus/<%= haiku._id %>"> <%=haiku.title %> </a>
+          <a href="/haikus/<%= haiku.id %>"> <%=haiku.title %> </a>
           <form action="/haikus/<%=haiku.id %>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE" />
+            <input id='delete' type="submit" value="delete" />
           </form>
-          <a href="/haikus/<%=haiku._id %>/edit">Edit</a>
+          <a href="/haikus/<%=haiku.id %>/edit">Edit</a>
         </li>
         <% }) %>
+        <iframe height= "100px"  src="https://preview.p5js.org/MarlonBarriosSolano/embed/wkYyfEz_M"></iframe>
   </body>
 </html>

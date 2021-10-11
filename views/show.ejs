@@ -4,19 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <LINK href="/styles.css" rel="stylesheet" type="text/css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+            </style>
     <title>Show</title>
   </head>
   <body>
     <nav>
       <a href="/haikus">Back to haikus Index</a>
     </nav>
-    <h1><%=haiku.title %></h1>
-   <p><%= haiku.line1%></p>
+    <h1 id='title'><%=haiku.title %> <span id='author'> by <%= haiku.author%></span></h1>
+ 
+   <p class='line'><%= haiku.line1%></p>
     <br />
-    <p><%= haiku.line2%></p>
+    <p class='line'><%= haiku.line2%></p>
     <br />
-    <p><%= haiku.line3%></p>
+    <p class='line'><%= haiku.line3%></p>
     <br />
-    <p><img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=<%=haiku.line1,%><%=haiku.line2,%><%=haiku.line3%>"  download /"></p>
+    <p><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=<%=haiku.line1,%><%=haiku.line2,%><%=haiku.line3%>"  download /"></p>
   </body>
 </html>
