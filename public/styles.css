@@ -28,10 +28,11 @@ body {
 
   } 
 
-  input {text-align: center;
+  input {
+    text-align: center;
     width: 500px ;
     height: 60px;
-    font-size: 50px;
+    font-size: 45px;
     align-items: center;
   }
 
@@ -58,6 +59,38 @@ body {
     background-color: black;
     color: white;
   }
+
+
+.line {
+    animation: fadeIn 12s;
+    -webkit-animation: fadeIn 12s;
+    -moz-animation: fadeIn 12s;
+    -o-animation: fadeIn 12s;
+    -ms-animation: fadeIn 12s;
+  }
+
+
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
   
-
-
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }

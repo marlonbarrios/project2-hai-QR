@@ -4,13 +4,22 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 
+
 //iniitalize ezpress app
 const app = express();
-const haikusController = require('./controllers/haikus')
+const haikusController = require('./controllers/haikus');
+const { $where } = require('./models/haiku');
 
 // Configure App Settings
 require('dotenv').config();
 const DATABASE_URL = process.env.DATABASE_URL;
+
+
+
+
+
+     
+ 
 
 
 // Connect to MongoDB
@@ -29,8 +38,6 @@ app.use(methodOverride('_method'));
 
 
 app.use('/haikus', haikusController)
-
-
 
 
 

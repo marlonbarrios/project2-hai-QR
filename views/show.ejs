@@ -12,7 +12,7 @@
   </head>
   <body>
     <nav>
-      <a href="/haikus">Back to haikus Index</a>
+      <a href="/haikus">Back to HAIKQR Index</a>
     </nav>
     <h1 id='title'><%=haiku.title %> <span id='author'> by <%= haiku.author%></span></h1>
  
@@ -22,6 +22,6 @@
     <br />
     <p class='line'><%= haiku.line3%></p>
     <br />
-    <p><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=<%=haiku.line1,%><%=haiku.line2,%><%=haiku.line3%>"  download /"></p>
+    <p><img id='qrcode' src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=<%=haiku.line1,%><%=haiku.line2,%><%=haiku.line3%>"  download /"></p>
   </body>
 </html>
