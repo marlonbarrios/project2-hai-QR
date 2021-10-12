@@ -13,15 +13,16 @@ haikuRouter.get('/seed', async (req, res) => {
 // Index
 haikuRouter.get("/", (req, res) => {
     Haiku.find({}, (error, allHaikus) => {
-      res.render("index.ejs", {
+      res.render("./haikus/index.ejs", {
         haikus: allHaikus,
       })
     })
   })
 
+
  //NNN
  haikuRouter.get("/new", (req, res) => {
-    res.render("new.ejs")
+    res.render("./haikus/new.ejs")
   })
 
 // Delete
@@ -76,7 +77,7 @@ Haiku.create(req.body, function (err, haiku) {
 haikuRouter.get("/:_id/edit", (req, res) => {
     Haiku.findById(req.params._id, (err, foundHaiku) => {
         
-      res.render("edit.ejs", {
+      res.render("./haikus/edit.ejs", {
         haiku: foundHaiku,
       
       })
@@ -87,10 +88,11 @@ haikuRouter.get("/:_id/edit", (req, res) => {
   // Show
 haikuRouter.get("/:_id", (req, res) => {
     Haiku.findById(req.params._id, (err, foundHaiku) => {
-      res.render("show.ejs", {
+      res.render("haikus/show.ejs", {
         haiku: foundHaiku,
       })
     })
 })
 
 module.exports = haikuRouter
+
