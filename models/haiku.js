@@ -9,6 +9,14 @@ const haikuSchema = new Schema({
   line2: { type: String, required: true },
   line3: { type: String, required: true },
 
+  createdBy: {
+
+    type: Schema.Types.ObjectId,
+    
+    ref: 'User'
+},
+
+
 //   completed:{type: Boolean, default: false },
 
 }, {timestamps: true });

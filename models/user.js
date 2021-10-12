@@ -14,6 +14,6 @@ const userSchema = new Schema({
     // isAuthor: Boolean,
 }, { timestamps: true });
 
-
+const createdBy = mongoose.model('User', userSchema);
 // Export the result of compiling our Schema into a model
 module.exports = mongoose.model('User', userSchema);
