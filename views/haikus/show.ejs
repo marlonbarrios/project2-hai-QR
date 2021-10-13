@@ -13,7 +13,11 @@
   <body>
     
     <nav>
-      <a href="/haikus">Back to HAIKQR Index</a>
+   
+      <a href="/">Home</a>    
+      <a href="/haikus">Explore</a>    
+      <a href="/haikus/new">Create</a>    
+      <a href="/users/logout">Logout</a>  
     </nav>
     <h1 id='title'><%=haiku.title %> <span id='author'> by <%= haiku.author%></span></h1>
  
@@ -23,6 +27,14 @@
     <br />
     <p class='line'><%= haiku.line3%></p>
     <br />
+    <p class='date'><%= haiku.createdAt%></p>
+    <p class='date'><%= haiku.updatedAt%></p>
+
+    <a href=`http://www.facebook.com/share.php?u=${haikus/<%=haiku._id%>}`>share in facebook</a>  
+  
+
+
+
     <p><img id='qrcode' src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=<%=haiku.line1,%><%=haiku.line2,%><%=haiku.line3%>"  download /"></p>
   </body>
 </html>

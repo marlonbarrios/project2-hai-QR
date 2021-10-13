@@ -9,35 +9,46 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
         </style>
     <LINK href="/styles.css" rel="stylesheet" type="text/css">
-    <title>HAIK-QR</title>
+  
 </head>
 <body>
     <div id='container'>
         <div id='col1'>
-            <div id='cell1'><h1>Hai-QR</h1></div>
+            <div id='cell1'>  <h1>Hai</h1>
+                <h1>QR</h1></div>
             <div id='cell4'></div>
-            <div id='cell7'></div>
+            <div id='cell7'>
+               <img class='line' src="./assets/images/oldpond.png" alt="qr code image" width="120" height="120">
+            </div>
         </div>
         <div id='col2'>
-            <div id='cell2'></div>
+            <div id='cell2'>
+              
+            </div>
             <div id='cell5'>
                 <p class='line'>An old silent pond,</p>
                 <p class='line'>A frog jumps into the pond,</p>
                 <p class='line'>splash! Silence again.</p>
-                <p><img class='line' src="./assets/images/oldpond.png" alt="qr code image" width="180" height="180"></p>
+                
             </div>
-            <div id='cell8'></div>
+            <div id='cell8'>
+                <iframe class='line' width='612px' height='120px' src="https://preview.p5js.org/MarlonBarriosSolano/embed/Aill-4-Y-"></iframe>
+              
+            </div>
         </div>
         <div id='col3'>
             <div id='cell3'>
-                <nav>
+               
                     <% if(user) { %>
+                        <nav> 
+                    <a href="/haikus">Explore</a>
+                    <a href="/haikus/new">create</a>
                     <a href="/users/logout">Logout</a>
                     <% } else { %>
                     <a href="/users/login">Login</a>
                     <a href="/users/signup">Signup</a>
-                    <% } %>
-                </nav>
+                    <% } %> </nav>
+               
             </div>
             <div id='cell6'>
                 <p>This is probably the most famous Haiku by Matsuo Basho

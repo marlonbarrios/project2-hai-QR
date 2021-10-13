@@ -2,6 +2,9 @@ const express = require('express');
 const userRouter = express.Router();
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
+const Haiku = require('../models/haiku');
+
+const isAuthenticated = require('../utilities/auth')
 
 
 
@@ -62,21 +65,25 @@ userRouter.get('/logout', (req, res) => {
 });
 
 // Protected Route
+
 userRouter.get('/dashboard', isAuthenticated, (req, res) => {
     User.findById(req.session.user, (err, user) => {
-        res.render('dashboard.ejs', { user });
+        Haiku.find({createdBy: user._id}, (err, haikus) => {
+            res.render('dashboard.ejs', { user, haikus });
+        })
+       
     });
 });
 
 // Utility Functions
 
-// Auth middleware
-function isAuthenticated(req, res, next) {
-    if(!req.session.user) { // user is not logged in
-        return res.redirect('/login');
-    } 
-    next(); // user is authenticated, keep moving on to the next step
-}
+// // Auth middleware
+// function isAuthenticated(req, res, next) {
+//     if(!req.session.user) { // user is not logged in
+//         return res.redirect('/login');
+//     } 
+//     next(); // user is authenticated, keep moving on to the next step
+// }
 
 
 // INDUCES

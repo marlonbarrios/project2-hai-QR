@@ -1,7 +1,10 @@
+const { query } = require("express")
 const express = require("express")
 const haikuRouter = express.Router()
 const Haiku = require('../models/haiku')
 const seedData = require('../models/haikuSeed')
+const isAuthenticated = require('../utilities/auth')
+const user = require('../controllers/users')
 
 
 haikuRouter.get('/seed', async (req, res) => {
@@ -11,7 +14,7 @@ haikuRouter.get('/seed', async (req, res) => {
 });
 
 // Index
-haikuRouter.get("/", (req, res) => {
+haikuRouter.get("/",isAuthenticated, (req, res) => { 
     Haiku.find({}, (error, allHaikus) => {
       res.render("./haikus/index.ejs", {
         haikus: allHaikus,
@@ -21,16 +24,15 @@ haikuRouter.get("/", (req, res) => {
 
 
  //NNN
- haikuRouter.get("/new", (req, res) => {
+ haikuRouter.get("/new", isAuthenticated, (req, res) => {
     res.render("./haikus/new.ejs")
   })
 
 // Delete
-haikuRouter.delete("/:id", (req, res) => {
+haikuRouter.delete("/:id", isAuthenticated, (req, res) => {
     Haiku.findByIdAndRemove(req.params.id, (err, haikus) => {
-      res.redirect("/haikus");
+      res.redirect("/users/dashboard");
     });
-  
 });
 
 // Update
@@ -54,7 +56,7 @@ haikuRouter.delete("/:id", (req, res) => {
     
 
 
- haikuRouter.put('/:id', (req, res) => {
+ haikuRouter.put('/:id', isAuthenticated, (req, res) => {
 
      
       Haiku.findByIdAndUpdate(req.params.id, req.body, (err, haiku) => {
@@ -65,16 +67,17 @@ haikuRouter.delete("/:id", (req, res) => {
 
 
 //   // Create Route
-haikuRouter.post('/', (req, res) => {
+haikuRouter.post('/', isAuthenticated, (req, res) => {
+  req.body.createdBy = req.session.user;
 // req.body.completed = !!req.body.completed; // !!'on' -> true or !!undefined -> false
 Haiku.create(req.body, function (err, haiku) {
-        res.redirect('/haikus'); // tells the browser to make another GET request to /books
+       es.redirect("haikus/:_id"); // tells the browser to make another GET request to /books
     });
 });
 
 ////eeeee
 
-haikuRouter.get("/:_id/edit", (req, res) => {
+haikuRouter.get("/:_id/edit", isAuthenticated, (req, res) => {
     Haiku.findById(req.params._id, (err, foundHaiku) => {
         
       res.render("./haikus/edit.ejs", {
@@ -86,7 +89,7 @@ haikuRouter.get("/:_id/edit", (req, res) => {
 
 
   // Show
-haikuRouter.get("/:_id", (req, res) => {
+haikuRouter.get("/:_id", isAuthenticated, (req, res) => {
     Haiku.findById(req.params._id, (err, foundHaiku) => {
       res.render("haikus/show.ejs", {
         haiku: foundHaiku,
