@@ -10,7 +10,7 @@
   </head>
   <body>
     <div id='container-mob'>
-    <h1 id='title' >HAIKQR</h1>
+    <header>   <h1>Hai-QR</h1>
     <nav>
       <a href="/">Home</a>
       <a href="/haikus/">Explore</a>
@@ -19,14 +19,27 @@
           <a href="/haikus/search">Search</a>
           <a href="/users/logout">Logout</a>
       </nav>
-     
+    </header>
+    <div id='poem-body'>
     <ul>
       <% haikus.forEach(haiku => { %>
         <li style='text-transform: capitalize;'>
           <a href="/haikus/<%= haiku.id %>"> <%=haiku.title %> <span> by</span> <%=haiku.author%> </a>
-          
         </li>
         <% }) %>
+      </ul>
       </div>
+      <footer>
+
+
+        <p>Concept and Software Development by Marlon Barrios Solano</p>  <p><span id='date-time'></span>.</p>
+    </body> 
+      </footer>
+
+      <script>
+        var dt = new Date();
+        document.getElementById('date-time').innerHTML=dt;
+        </script>
+    </div>
   </body>
 </html>

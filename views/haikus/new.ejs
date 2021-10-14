@@ -12,17 +12,19 @@
 	</head>
 	<body>
 		<div id='container-mob'>
-		<nav>
-			<a href="/">Home</a>
-			<a href="/haikus/">Explore</a>
-			  <a href="/haikus/new">Create</a>
-				<a href="/users/dashboard">Dashboard</a>
-				<a href="/haikus/search">Search</a>
-				<a href="/users/logout">Logout</a>
-			</nav>
-		<h1>Haik-QR</h1>
-		<form action="/haikus/" method="POST">
-         <input type="text" name="line1" placeholder='5 syllables'/><br />
+			<header>   <h1>Hai-QR</h1>
+				<nav>
+				  <a href="/">Home</a>
+				  <a href="/haikus/">Explore</a>
+					<a href="/haikus/new">Create</a>
+					  <a href="/users/dashboard">Dashboard</a>
+					  <a href="/haikus/search">Search</a>
+					  <a href="/users/logout">Logout</a>
+				  </nav>
+				</header>
+				<div id="poem-body">
+		<form action="/haikus/" method="POST" autocomplete="off">
+         <input type="text" name="line1" placeholder='5 syllables' ><br />
            <input type="text" name="line2" placeholder='7 syllables'/><br />
           <input type="text" name="line3" placeholder='5 syllables'/><br />
 		<input type="text" name="title" placeholder='title'/><br />
@@ -30,7 +32,18 @@
 		
 			<input type="submit" name="" value="Add Haiku" />
 		</form>
-      
+	</div>
+	<footer>
+
+
+        <p>Concept and Software Development by Marlon Barrios Solano</p>  <p><span id='date-time'></span>.</p>
+    </body> 
+      </footer>
+
+      <script>
+        var dt = new Date();
+        document.getElementById('date-time').innerHTML=dt;
+        </script>
 	</div>
 	</body>
 </html>

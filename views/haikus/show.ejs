@@ -15,14 +15,15 @@
       <header>
         <h1>Hai-QR</h1>
       </header>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/haikus/">Explore</a>
-        <a href="/haikus/new">Create</a>
-          <a href="/users/dashboard">Dashboard</a>
-          <a href="/haikus/search">Search</a>
-          <a href="/users/logout">Logout</a>
-      </nav>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/haikus/">Explore</a>
+          <a href="/haikus/new">Create</a>
+            <a href="/users/dashboard">Dashboard</a>
+            <a href="/haikus/search">Search</a>
+            <a href="/users/logout">Logout</a>
+            <a href="/api/haikus">API</a>
+        </nav>
  <div id=poem-body>
     <h1 id='title'><%=haiku.title %> <span id='author'> by <%= haiku.author%></span></h1>
    <p class='line'><%= haiku.line1%></p>

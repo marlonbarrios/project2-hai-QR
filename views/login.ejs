@@ -12,19 +12,37 @@
     <title>Login</title>
 </head>
 <body>
-    <h1>Login</h1>
+    <div id='container-mob'>
+        <header>
+            <h1>Hai-QR</h1>
+    
+        </header>
+        <div id='poem-body'>
     <% if(error) { %>
         <p style="color: red;"><%= error %></p>
     <% } %>
     <p>Please Enter Your Credentials To Login</p>
     <form action="/users/login" method="POST" autocomplete="off">
-        <label>Username:
-            <input type="text" name="username" required>
+       
+            <input type="text" name="username" required placeholder="username">
         </label><br>
-        <label>Password:
+       
             <input type="password" name="password" required>
         </label><br>
         <input type="submit" value="Login">
     </form>
+</div>
+<footer>
+
+
+    <p>Concept and Software Development by Marlon Barrios Solano</p>  <p><span id='date-time'></span>.</p>
+</body> 
+  </footer>
+
+  <script>
+    var dt = new Date();
+    document.getElementById('date-time').innerHTML=dt;
+    </script>
+</div>
 </body>
 </html>

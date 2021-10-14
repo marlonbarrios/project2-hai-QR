@@ -10,7 +10,7 @@ module.exports = [
       title: 'A World of Dew' ,
       author: "Kobayashi Issa",
       line1:'A world of dew,',
-      line2: 'And within every dewdropd',
+      line2: 'And within every dewdrop',
       line3: 'A world of struggle.',
 
     },
