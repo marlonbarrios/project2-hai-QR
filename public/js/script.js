@@ -21,13 +21,16 @@ function handleClick() {
     if(!userInput) return; // don't run any of the code
     // we need to send a get request to our server to basically search for a book based on the title
     // once we get data back, we will add that data to the dom
-    fetch('/haikus/search?title=' + userInput)
+    fetch('/haikus/search?title=' + userInput )
     .then(response => response.json())
     .then(data => {
         resultsList = data;
         inputEl.value = ""
         render();
     });
+
+
+
 }
 
 

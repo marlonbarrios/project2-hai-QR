@@ -13,7 +13,7 @@ const app = express();
 const haikusController = require('./controllers/haikus.js');
 const usersController = require('./controllers/users.js');
 const indexController = require('./controllers/index.js');
-
+const apiController = require('./controllers/api.js');
 
 // Configure App Settings
 require('dotenv').config();
@@ -36,9 +36,11 @@ app.use(expressSession({
     saveUninitialized: false 
 }));
 
+///Routes
+app.use('/', indexController)
 app.use('/haikus', haikusController)
 app.use('/users', usersController)
-app.use('/', indexController)
+app.use('/api', apiController)
 
 const PORT = process.env.PORT;
 
