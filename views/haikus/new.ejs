@@ -11,8 +11,17 @@
 		<title> Create</title>
 	</head>
 	<body>
+		<div id='container-mob'>
+		<nav>
+			<a href="/">Home</a>
+			<a href="/haikus/">Explore</a>
+			  <a href="/haikus/new">Create</a>
+				<a href="/users/dashboard">Dashboard</a>
+				<a href="/haikus/search">Search</a>
+				<a href="/users/logout">Logout</a>
+			</nav>
 		<h1>Haik-QR</h1>
-		<form action="/haikus" method="POST">
+		<form action="/haikus/" method="POST">
          <input type="text" name="line1" placeholder='5 syllables'/><br />
            <input type="text" name="line2" placeholder='7 syllables'/><br />
           <input type="text" name="line3" placeholder='5 syllables'/><br />
@@ -21,7 +30,7 @@
 		
 			<input type="submit" name="" value="Add Haiku" />
 		</form>
-        <iframe height= "100px"  src="https://preview.p5js.org/MarlonBarriosSolano/embed/wkYyfEz_M"></iframe>
-	</body>
+      
+	</div>
 	</body>
 </html>

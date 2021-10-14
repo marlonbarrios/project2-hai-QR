@@ -13,6 +13,18 @@ haikuRouter.get('/seed', async (req, res) => {
     res.redirect('/haikus');
 });
 
+//search
+haikuRouter.get("/search", isAuthenticated,  (req, res) => {
+  if(req.query.title) {
+    Haiku.find({ title: {$regex: req.query.title }}, (err, haikus)=> {
+      res.json(haikus)
+   });
+  } else {
+    res.render('haikus/search.ejs')
+  }
+  
+  })
+
 // Index
 haikuRouter.get("/",isAuthenticated, (req, res) => { 
     Haiku.find({}, (error, allHaikus) => {
@@ -71,7 +83,7 @@ haikuRouter.post('/', isAuthenticated, (req, res) => {
   req.body.createdBy = req.session.user;
 // req.body.completed = !!req.body.completed; // !!'on' -> true or !!undefined -> false
 Haiku.create(req.body, function (err, haiku) {
-       es.redirect("haikus/:_id"); // tells the browser to make another GET request to /books
+       res.redirect("/users/dashboard"); // tells the browser to make another GET request to /books
     });
 });
 
@@ -97,5 +109,5 @@ haikuRouter.get("/:_id", isAuthenticated, (req, res) => {
     })
 })
 
-module.exports = haikuRouter
 
+module.exports = haikuRouter

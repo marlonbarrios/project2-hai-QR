@@ -11,16 +11,20 @@
     <title>Show</title>
   </head>
   <body>
-    
+    <div id='container-mob'>
+      <header>
+        <h1>Hai-QR</h1>
+      </header>
     <nav>
-   
-      <a href="/">Home</a>    
-      <a href="/haikus">Explore</a>    
-      <a href="/haikus/new">Create</a>    
-      <a href="/users/logout">Logout</a>  
-    </nav>
+      <a href="/">Home</a>
+      <a href="/haikus/">Explore</a>
+        <a href="/haikus/new">Create</a>
+          <a href="/users/dashboard">Dashboard</a>
+          <a href="/haikus/search">Search</a>
+          <a href="/users/logout">Logout</a>
+      </nav>
+ <div id=poem-body>
     <h1 id='title'><%=haiku.title %> <span id='author'> by <%= haiku.author%></span></h1>
- 
    <p class='line'><%= haiku.line1%></p>
     <br />
     <p class='line'><%= haiku.line2%></p>
@@ -28,13 +32,23 @@
     <p class='line'><%= haiku.line3%></p>
     <br />
     <p class='date'><%= haiku.createdAt%></p>
-    <p class='date'><%= haiku.updatedAt%></p>
-
-    <a href=`http://www.facebook.com/share.php?u=${haikus/<%=haiku._id%>}`>share in facebook</a>  
-  
-
-
+    <!-- <p class='date'><%= haiku.updatedAt%></p> -->
+  </div>
+  <div id='qr-code'>
 
     <p><img id='qrcode' src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=<%=haiku.line1,%><%=haiku.line2,%><%=haiku.line3%>"  download /"></p>
+
+
+  </div>
+  
+<footer>
+
+
+    <a href=`http://www.facebook.com/share.php?u=${haikus/<%=haiku._id%>}`>share in facebook</a>  
+    <a href=`http://www.facebook.com/share.php?u=${haikus/<%=haiku._id%>}`>share in Linkedin</a>  
+    <p>Concept and Software Development by Marlon Barrios Solano</p>
+  </footer>
+</footer>
+  </div>
   </body>
 </html>

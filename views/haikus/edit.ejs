@@ -14,7 +14,15 @@
 
   <body>
     <h1>Edit Haiku</h1>
-  
+   <div id='container-mob'>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/haikus/">Explore</a>
+          <a href="/haikus/new">Create</a>
+            <a href="/users/dashboard">Dashboard</a>
+            <a href="/haikus/search">Search</a>
+            <a href="/users/logout">Logout</a>
+        </nav>
       <!--  NOTE: the form is pre-populated with values for the server-->
 
       <form action="/haikus/<%=haiku._id%>?_method=PUT" method="POST">
@@ -27,5 +35,6 @@
 
       <input type="submit" name="" value="Submit Changes" />
     </form>
+  </div>
   </body>
 </html>

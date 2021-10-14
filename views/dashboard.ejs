@@ -11,17 +11,18 @@
     <title>Hello <%= user.username %></title>
 </head>
 <body>
-    <header>
-        <div id='container'>
+   
+        <div id='container-mob'>
         <h1>Hello <%= user.username %></h1>
         
-        <nav class='nav-links'>
-            <a href="/">About</a>    
-            <a href="/haikus">Explore</a>    
-            <a href="/haikus/new">Create</a>    
-            <a href="/users/logout">Logout</a>  
-
-        </nav>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/haikus/">Explore</a>
+              <a href="/haikus/new">Create</a>
+                <a href="/users/dashboard">Dashboard</a>
+                <a href="/haikus/search">Search</a>
+                <a href="/users/logout">Logout</a>
+            </nav>
         <h3>Here are the Haikus uploaded by <%= user.username %></h3>
         <% haikus.forEach(haiku => { %>
             <li>
@@ -35,8 +36,6 @@
 
 
 
-
-</div>
 
 </div>
 </body>
