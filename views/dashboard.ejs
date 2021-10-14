@@ -32,17 +32,17 @@
         <h3> All Haikus uploaded by you will appear here in chronological order and you may edit and/or delete them.
         </h3>
         <% haikus.forEach(haiku => { %>
-            <ul>
+           
             <li style='text-transform: capitalize; '>
-          <p><form action="/haikus/<%=haiku.id %>?_method=DELETE" method="POST">
+          <p><a href="/haikus/<%= haiku.id %>"> <%=haiku.title %> </a><form action="/haikus/<%=haiku.id %>?_method=DELETE" method="POST">
             <input id='delete' type="submit" value="delete" />
-          </form><a href="/haikus/<%= haiku.id %>"> <%=haiku.title %> </a>
+          </form>
           <a href="/haikus/<%=haiku.id %>/edit">Edit</a>
               </p>
         </li>
             <% }) %>
 
-</ul>
+
 </div>
 <footer>
 

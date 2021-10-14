@@ -33,12 +33,12 @@
     <p class='line'><%= haiku.line3%></p>
     <br />
     <p class='date'><%= haiku.createdAt%></p>
-    <!-- <p class='date'><%= haiku.updatedAt%></p> -->
+ 
   </div>
+
   <div id='qr-code'>
 
-    <p><img id='qrcode' src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=<%=haiku.line1,%><%=haiku.line2,%><%=haiku.line3%>"  download /"></p>
-
+    <p><img id='qrcode' src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=<%=haiku.line1,%><%=haiku.line2,%><%=haiku.line3%>" /"></p>
 
   </div>
   
