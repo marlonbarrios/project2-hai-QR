@@ -2,6 +2,12 @@
 <html lang="en">
 
 <head>
+  <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="Your Website Title" />
+<meta property="og:description"   content="Your description" />
+<meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+</head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,8 +46,20 @@
       <p><img id='qrcode'
           src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=<%=haiku.line1,%><%=haiku.line2,%><%=haiku.line3%>" /">
           </p> </div> <footer>
-        <a href=`http://www.facebook.com/share.php?u=https://haiqr2.herokuapp.com/haikus/${<%=haiku._id%>}`>share in facebook</a> <a
-          href=`http://www.facebook.com/share.php?u=${haikus/<%=haiku._id%>}`>share in Linkedin</a> <p>Concept and
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+              fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));</script>
+              
+              <!-- Your share button code -->
+              <div class="fb-share-button" 
+              data-href=`https://haiqr2.herokuapp.com/haikus/<%=haiku._id%>`
+              data-layout="button_count">
+              </div>
+       <p>Concept and
           Software Development by Marlon Barrios Solano</p>
       </footer>
       </footer>
