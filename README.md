@@ -37,6 +37,7 @@ Simple authentication is necesary.
 1.-Improve the UI and general design.
 2.-Implement a generator of new Haikus using the database for random and AI Haiku Bot (Neural Network).
 3.-Define the styles for desktop and mobile.
+4.-Social media sharing.
 
 ## More Screenshots
 ![Screenshot](https://github.com/marlonbarrios/project2-hai-QR/blob/main/public/assets/images/create%20new.png?raw=true)]
