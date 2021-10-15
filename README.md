@@ -25,7 +25,7 @@ Haikus and QR codes originated in Japan and share a minimalist computational est
 
 ## Technologies Used
 
-FULL STACK CRUD APP: HTML, CSS, JavaScript, ExpressJS, MongoDB, Mongoose, Heroku, Json, NodeJS, DOM.
+FULL STACK CRUD APP: HTML, CSS, JavaScript, ExpressJS, MongoDB, Mongoose, Heroku, Json, NodeJS, DOM, Bcrypt.
 QR Code Generator API: https://goqr.me/api/
 
 ## Getting Started
