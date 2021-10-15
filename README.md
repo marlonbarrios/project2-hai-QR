@@ -18,7 +18,7 @@ Punctuation and capitalization are up to the poet.
 A haiku does not have to rhyme, in fact usually it does not rhyme at all.
 
 Haikus and QR codes originated in Japan and share a minimalist computational esthetic. Hai-QR allows you to create, store and visulaize Haikus as functional QR codes. Hai-QR is an exploration of the poetics of technologies of composition and transcoding. 
-- Signup, login, create, edit, explore the  searcable database and store Haikus.
+- Signup, login, create, edit and explore the searcable database and store Haikus.
 - Generate a QR Code of your creation.
 - An API is served.
 
