@@ -36,6 +36,7 @@ Simple authentication is necesary.
 ## Next Steps
 1.-Improve the UI and general design.
 2.-Implement a generator of new Haikus using the database for random and AI Haiku Bot (Neural Network).
+https://www.japantimes.co.jp/news/2018/05/08/national/japanese-researchers-work-create-ai-capable-generating-haiku-images/
 3.-Define the styles for desktop and mobile.
 4.-Social media sharing.
 
