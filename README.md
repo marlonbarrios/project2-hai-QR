@@ -17,7 +17,7 @@ The structure of a traditional haiku is always the same, fowwling these basic ru
 Punctuation and capitalization are up to the poet.
 A haiku does not have to rhyme, in fact usually it does not rhyme at all.
 
-Haikus and QR codes originated in Japan and share a minimalist computational esthetic. Hai-QR allows you to create, store and visulaize Haikus as functional QR codes. Hai-QR is an exploration of the poetics of technologies of composition and transcoding.
+Haikus and QR codes originated in Japan and share a minimalist computational esthetic. Hai-QR allows you to create, store and visulaize Haikus as functional QR codes. Hai-QR is an exploration of the poetics of technologies of composition and transcoding. 
 - Signup, login, create, edit, explore the  searcable database and store Haikus.
 - Generate a QR Code of your creation.
 - An API is served.
@@ -25,7 +25,7 @@ Haikus and QR codes originated in Japan and share a minimalist computational est
 
 ## Technologies Used
 
-FULL STACK CRUD APP: HTML, CSS, JavaScript, ExpressJS, MongoDB, Mongoose, Heroku, Json, NodeJS, DOM, Bcrypt.
+FULL STACK CRUD APP: HTML, CSS, JavaScript, ExpressJS, MongoDB, Mongoose, Heroku, Json, NodeJS, DOM, Bcrypt, Google Fonts
 QR Code Generator API: https://goqr.me/api/
 
 ## Getting Started
