@@ -1,5 +1,6 @@
 # Hai-QR
-[!(https://storage.ning.com/topology/rest/1.0/file/get/9703258293?profile=original)]
+
+![screenshot](https://github.com/marlonbarrios/project2-hai-QR/blob/main/public/assets/images/show.png)
 
 Create, store, edit Haikus and generate QR codes.
 
@@ -38,11 +39,8 @@ Simple authentication is necesary.
 3.-Define the styles for desktop and mobile.
 
 ## More Screenshots
-[!(https://storage.ning.com/topology/rest/1.0/file/get/9703259064?profile=original)]
-
-[!(https://storage.ning.com/topology/rest/1.0/file/get/9703259654?profile=original)]
-
-
+![Screenshot](https://github.com/marlonbarrios/project2-hai-QR/blob/main/public/assets/images/create%20new.png?raw=true)
+![screenshot](https://github.com/marlonbarrios/project2-hai-QR/blob/main/public/assets/images/all%20haikkus.png?raw=true)
 
 
 
