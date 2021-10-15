@@ -1,5 +1,5 @@
 # Hai-QR
-[!(https://storage.ning.com/topology/rest/1.0/file/get/9703258293?profile=original)]
+![screenshot](https://github.com/marlonbarrios/project2-hai-QR/blob/main/public/assets/images/show.png)
 
 Create, store, edit Haikus and generate QR codes.
 
