@@ -51,7 +51,8 @@ userRouter.post('/signup', (req, res) => {
   // 2) Save the user data to the database with the hashed version of the password
   User.create(req.body, (err, user) => {
       // 4) login with a session and then send the user a dashboard
-      req.session.user = user.id
+      req.session.user = user._id
+      console.log(user._id)
       res.redirect('/users/login');
   });
 });
