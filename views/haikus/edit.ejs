@@ -1,40 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <LINK href="/styles.css" rel="stylesheet" type="text/css">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-            </style>
-    <title>HaikuList</title>
-  </head>
 
-  <body>
-    <h1>Edit Haiku</h1>
-   <div id='container-mob'>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <LINK href="/styles.css" rel="stylesheet" type="text/css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+  </style>
+  <title>HaikuList</title>
+</head>
+
+<body>
+  <h1>Edit Haiku</h1>
+  <div id='container-mob'>
+    <header>
+      <h1>Hai-QR</h1>
       <nav>
         <a href="/">Home</a>
         <a href="/haikus/">Explore</a>
-          <a href="/haikus/new">Create</a>
-            <a href="/users/dashboard">Dashboard</a>
-            <a href="/haikus/search">Search</a>
-            <a href="/users/logout">Logout</a>
-        </nav>
-      <!--  NOTE: the form is pre-populated with values for the server-->
+        <a href="/haikus/new">Create</a>
+        <a href="/users/dashboard">Dashboard</a>
+        <a href="/haikus/search">Search</a>
+        <a href="/users/logout">Logout</a>
+      </nav>
+    </header>
 
-      <form action="/haikus/<%=haiku._id%>?_method=PUT" method="POST">
-       <input type="text" name="line1" value="<%=haiku.line1%>"/> <br />
 
-      <input type="text" name="line2" value="<%=haiku.line2%>"/> <br />
-       <input type="text" name="line3" value="<%=haiku.line3%>"/><br />
-      <input type="text" name="title" value="<%=haiku.title%>"/><br />
-      <input type="text" name="author" value="<%=haiku.author%>"/><br />
+    <form action="/haikus/<%=haiku._id%>?_method=PUT" method="POST">
+      <input type="text" name="line1" value="<%=haiku.line1%>" /> <br />
+
+      <input type="text" name="line2" value="<%=haiku.line2%>" /> <br />
+      <input type="text" name="line3" value="<%=haiku.line3%>" /><br />
+      <input type="text" name="title" value="<%=haiku.title%>" /><br />
+      <input type="text" name="author" value="<%=haiku.author%>" /><br />
 
       <input type="submit" name="" value="Submit Changes" />
     </form>
   </div>
-  </body>
+</body>
 </html>

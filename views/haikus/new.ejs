@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <LINK href="/styles.css" rel="stylesheet" type="text/css">
-            <style>
-                @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-                </style>
-		<title> Create</title>
-	</head>
-	<body>
-		<div id='container-mob'>
-			<header>   <h1>Hai-QR</h1>
-				<nav>
-				  <a href="/">Home</a>
-				  <a href="/haikus/">Explore</a>
-				
-					  <a href="/users/dashboard">Dashboard</a>
-					  <a href="/haikus/search">Search</a>
-					  <a href="/users/logout">Logout</a>
-				  </nav>
-				</header>
-				<div id="poem-body">
-		<form action="/haikus/" method="POST" autocomplete="off">
-         <input type="text" name="line1" placeholder='5 syllables' ><br />
-           <input type="text" name="line2" placeholder='7 syllables'/><br />
-          <input type="text" name="line3" placeholder='5 syllables'/><br />
-		<input type="text" name="title" placeholder='title'/><br />
-		<input type="text" name="author" placeholder='author'/><br />
-		
-			<input type="submit" name="" value="Add Haiku" />
-		</form>
-	</div>
-	<footer>
 
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<LINK href="/styles.css" rel="stylesheet" type="text/css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+	</style>
+	<title> Create</title>
+</head>
 
-        <p>Concept and Software Development by Marlon Barrios Solano</p>  <p><span id='date-time'></span>.</p>
-    </body> 
-      </footer>
+<body>
+	<div id='container-mob'>
+		<header>
+			<h1>Hai-QR</h1>
+			<nav>
+				<a href="/">Home</a>
+				<a href="/haikus/">Explore</a>
+				<a href="/users/dashboard">Dashboard</a>
+				<a href="/haikus/search">Search</a>
+				<a href="/users/logout">Logout</a>
+			</nav>
+		</header>
+		<div id="poem-body">
+			<form action="/haikus/" method="POST" autocomplete="off">
+				<input maxlength="14" type="text" name="line1" placeholder='5 syllables/14 chars max'><br />
+				<input maxlength="18" type="text" name="line2" placeholder='7 syllables/18 chars max' /><br />
+				<input maxlength="14" type="text" name="line3" placeholder='5 syllables/14 chars max' /><br />
+				<input type="text" name="title" placeholder='title' /><br />
+				<input type="text" name="author" placeholder='author' /><br />
+				<input type="submit" name="" value="Add Haiku" />
+			</form>
+		</div>
+		<footer>
+			<p>Concept and Software Development by Marlon Barrios Solano</p>
+			<p><span id='date-time'></span>.</p>
+</body>
+</footer>
+<script>
+	var dt = new Date();
+	document.getElementById('date-time').innerHTML = dt;
+</script>
+</div>
+</body>
 
-      <script>
-        var dt = new Date();
-        document.getElementById('date-time').innerHTML=dt;
-        </script>
-	</div>
-	</body>
 </html>

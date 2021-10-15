@@ -28,12 +28,14 @@ db.on('error', (error) => console.log('MongoDB Error ' + error.message));
 
 app.use(morgan('dev'));
 app.use(express.static('public'));
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({
+    extended: false
+}));
 app.use(methodOverride('_method'));
 app.use(expressSession({
-    secret: 'cknlkclnclnen', // this is used to digitally sign our session cookies (prevents forgery)
-    resave: false, // this option updates session storage after request
-    saveUninitialized: false 
+    secret: 'cknlkclnclnen',
+    resave: false,
+    saveUninitialized: false
 }));
 
 ///Routes

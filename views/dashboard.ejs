@@ -1,59 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <LINK href="/styles.css" rel="stylesheet" type="text/css">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-            </style>
-    <title>Hello <%= user.username %></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <LINK href="/styles.css" rel="stylesheet" type="text/css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+  </style>
+  <title>Hello <%= user.username %></title>
 </head>
+
 <body>
-   
-        <div id='container-mob'>
-        <header>  
-            <h1>Hai-QR</h1>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/haikus/">Explore</a>
-                  <a href="/haikus/new">Create</a>
-                  
-                    <a href="/haikus/search">Search</a>
-                    <a href="/users/logout">Logout</a>
-                    <a href="/api/haikus">API</a>
-                </nav>
-        </header>
-       
-        
-       <div id='poem-body'>
-        <h3>Hello <%= user.username %>,</h3>
-        <h3> All Haikus uploaded by you will appear here in chronological order and you may edit and/or delete them.
-        </h3>
-        <% haikus.forEach(haiku => { %>
-           
-            <li style='text-transform: capitalize; '>
-          <p><a href="/haikus/<%= haiku.id %>"> <%=haiku.title %> </a><form action="/haikus/<%=haiku.id %>?_method=DELETE" method="POST">
+
+  <div id='container-mob'>
+    <header>
+      <h1>Hai-QR</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/haikus/">Explore</a>
+        <a href="/haikus/new">Create</a>
+
+        <a href="/haikus/search">Search</a>
+        <a href="/users/logout">Logout</a>
+        <a href="/api/haikus">API</a>
+      </nav>
+    </header>
+    <div id='poem-body'>
+      <h3>Hello <%= user.username %>,</h3>
+      <h3> All Haikus uploaded by you will appear here in chronological order and you may edit and/or delete them.
+      </h3>
+      <% haikus.forEach(haiku => { %>
+
+      <li style='text-transform: capitalize; '>
+        <p><a href="/haikus/<%= haiku.id %>"> <%=haiku.title %> </a>
+          <form action="/haikus/<%=haiku.id %>?_method=DELETE" method="POST">
             <input id='delete' type="submit" value="delete" />
           </form>
           <a href="/haikus/<%=haiku.id %>/edit">Edit</a>
-              </p>
-        </li>
-            <% }) %>
-
-
-</div>
-<footer>
-
-
-    <p>Concept and Software Development by Marlon Barrios Solano</p>  <p><span id='date-time'></span>.</p>
-</body> 
-  </footer>
-  <script>
-    var dt = new Date();
-    document.getElementById('date-time').innerHTML=dt;
-    </script>
+        </p>
+      </li>
+      <% }) %>
+    </div>
+    <footer>
+      <p>Concept and Software Development by Marlon Barrios Solano</p>
+      <p><span id='date-time'></span>.</p>
+</body>
+</footer>
+<script>
+  var dt = new Date();
+  document.getElementById('date-time').innerHTML = dt;
+</script>
 </div>
 </body>
+
 </html>

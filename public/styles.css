@@ -4,7 +4,7 @@
 
 body {
   color: white;
-background-color: black;
+  background-color: black;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -21,8 +21,8 @@ background-color: black;
   max-width: 750px;
   min-height: 1334px;
   display: flex;
-  flex-direction:column;
- 
+  flex-direction: column;
+
 }
 
 header {
@@ -58,11 +58,13 @@ footer {
   width: 100%;
 
 }
-a { color: rgb(255, 255, 255);
+
+a {
+  color: rgb(255, 255, 255);
   margin-left: 15px;
   margin-right: 15px;
 }
- 
+
 p {
   font-size: 14px;
 }
@@ -73,10 +75,10 @@ h1 {
   font-weight: bold 700;
 }
 
-li{
-    list-style-type: none;
-  }
- 
+li {
+  list-style-type: none;
+}
+
 .date {
   font-size: 15ppx;
 }
@@ -85,7 +87,7 @@ input {
   text-align: center;
   width: 500px;
   height: 60px;
-  font-size: 45px;
+  font-size: 40px;
   align-items: center;
 }
 
@@ -119,13 +121,13 @@ input {
   -moz-animation: fadeIn 12s;
   -o-animation: fadeIn 12s;
   -ms-animation: fadeIn 12s;
-} 
+}
 
 .line {
   font-style: italic;
   font-size: 20px;
-padding-top: 30px;
-margin-top: 10px;
+  padding-top: 30px;
+  margin-top: 10px;
   animation: fadeIn 12s;
   -webkit-animation: fadeIn 12s;
   -moz-animation: fadeIn 12s;
@@ -182,5 +184,3 @@ margin-top: 10px;
     opacity: 1;
   }
 }
-
-
